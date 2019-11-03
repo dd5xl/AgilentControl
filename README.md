@@ -1,2 +1,2 @@
 # AgilentControl
-Simple Tool for talking to Agilent E3621A power supply via GPIB
+Simple tool for talking to Agilent E3621A power supply via GPIB
