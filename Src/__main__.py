@@ -33,7 +33,6 @@ while 1:
     if serhcr:
         resp = Shcr.getsecstatus(serhcr)
         Shcr.clearsecstatus(serhcr)
-        #print(Shcr.getsecstatus(serhcr))
         Shcr.closecom(serhcr)
         if Shcr.decodestatus(resp):
             break
