@@ -7,7 +7,7 @@ import Gpib, E3631A, time, Shcr
 GPIBADDR = 5
 PSUDEV = "/dev/ttyUSB1"
 PSUBAUD = 460800
-HCRDEV = "/dev/ttyUSB0"
+HCRDEV = "/dev/ttyS0"
 HCRBAUD = 115200
 
 NORMVOLT = 5.2
@@ -40,8 +40,8 @@ while 1:
         Shcr.clearsecstatus(serhcr) # sonst Register löschen (VddLo)
         Shcr.closecom(serhcr)
     time.sleep(1)
-    E3631A.setoutput(serpsu, 0, 3.0, NORMAMP) # Glitch erzeugen
-    #time.sleep(0.1)
+    E3631A.setoutput(serpsu, 0, 2.0, NORMAMP) # Glitch erzeugen
+    time.sleep(2)
     E3631A.setoutput(serpsu, 0, NORMVOLT, NORMAMP)
     #E3631A.vramp(serpsu, 0, 5.2, 0.0, 0.2)
 
